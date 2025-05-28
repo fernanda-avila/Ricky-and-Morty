@@ -5,21 +5,21 @@ vida = 3
 inventario = []
 pontuacao = 0
 
-# Utilitário para narrativa com efeito de digitação
+
 def narrar(texto, velocidade=0.02):
     for letra in texto:
         print(letra, end='', flush=True)
         time.sleep(velocidade)
     print()
 
-# Introdução do jogo
+
 def introducao():
     narrar("\U0001F680 *Som de portal abrindo*")
     narrar("Rick: Morty, acorda! Você derrubou meu controle de portais dentro da torradeira!")
     narrar("Morty: Aaaah, Rick, de novo não cara! Eu só queria... sei lá, dormir, sabe?")
     input("\n(Pressione ENTER para cair nessa aventura multiversal sem sentido...)")
 
-# Escolha de dimensão
+
 def escolher_dimensao():
     narrar("\nVocê precisa escolher uma dimensão para procurar o controle:")
     print("1. Dimensão 35-C – Onde todo mundo é feito de queijo.")
@@ -28,7 +28,7 @@ def escolher_dimensao():
     escolha = input("Pra onde vamos, Morty? (1, 2 ou 3): ")
     return escolha.strip()
 
-# Batalhas multiversais
+
 def batalha():
     global vida, pontuacao
     inimigos = [
@@ -70,9 +70,9 @@ def batalha():
             narrar("Rick: Fica até melhor que o original. Tsc.")
             exit()
 
-# Eventos extras interdimensionais
+
 def evento_aleatorio():
-    global pontuacao, inventario  # <- adicione isso
+    global pontuacao, inventario  
     narrar("\n\U0001F3B2 Evento interdimensional ativado!")
     eventos = [
         "Morty entra num bar com dezenas de Mortys... todos reclamando da vida.",
@@ -85,7 +85,7 @@ def evento_aleatorio():
     inventario.append("Trauma existencial leve")
     pontuacao += 5
 
-# Fase bônus com Pickle Rick
+
 def fase_bonus():
     global pontuacao, vida
     narrar("\n\U0001F952 *Pickle Rick aparece gritando e girando com facas*")
@@ -102,7 +102,7 @@ def fase_bonus():
         vida -= 1
 
 
-# Final do jogo
+
 def final():
     narrar("\n\U0001F9EA De volta ao laboratório...")
     if "Portal engarrafado" in inventario:
@@ -115,7 +115,7 @@ def final():
     narrar("Rick: Morty, nada é real. Inclusive esse script.")
     narrar("\n\U0001F389 FIM! Vá descansar, já é loucura o suficiente por hoje.")
 
-# Loop principal do jogo
+
 def jogar():
     introducao()
     for rodada in range(3):
