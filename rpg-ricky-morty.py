@@ -14,6 +14,13 @@ def narrar(texto, velocidade=0.02):
 
 
 def introducao():
+    print("|--------|")
+    print("|--------|")
+    print("|--------|")
+    print("|-O------| zzzzzzzzzz")
+    print("|--------|")
+    print("|--------|")
+    print("|--------|")
     narrar("\U0001F680 *Som de portal abrindo*")
     narrar("Rick: Morty, acorda! Você derrubou meu controle de portais dentro da torradeira!")
     narrar("Morty: Aaaah, Rick, de novo não cara! Eu só queria... sei lá, dormir, sabe?")
@@ -22,7 +29,7 @@ def introducao():
 
 def escolher_dimensao():
     narrar("\nVocê precisa escolher uma dimensão para procurar o controle:")
-    print("1. Dimensão 35-C – Onde todo mundo é feito de queijo.")
+    print("1. Dimensão 35-C – Onde todo mundo é feito de queijo. \U0001F9C0")
     print("2. Dimensão Fart-X – Onde os peidos são conscientes e cantam ópera.")
     print("3. Cidadela dos Ricks – Centro político do multiverso.")
     escolha = input("Pra onde vamos, Morty? (1, 2 ou 3): ")
